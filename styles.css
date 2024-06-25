@@ -6,6 +6,7 @@ body {
 }
 
 body {
+  background-color: hsl(0, 0%, 8%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -14,14 +15,39 @@ body {
   /* border: 1px solid red; */
 }
 
+h1,
+h2,
+p {
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 24px;
+  margin: 0 0 8px 0;
+}
+
+h2 {
+  color: hsl(75, 94%, 57%);
+  font-size: 14px;
+  margin: 0;
+}
+
+p {
+  font-size: 14px;
+  margin: 24px 0px;
+}
+
 /* ID SELECTOR */
 #container {
-  border: 1px solid red;
+  box-sizing: border-box;
+  background-color: hsl(0, 0%, 12%);
+  border-radius: 12px;
+  color: hsl(0, 0%, 100%);
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 384px;
-  padding: 2.5em; /*40px*/
+  min-width: 384px;
+  padding: 40px;
 }
 
 /* CLASS SELECTORS */
@@ -29,4 +55,38 @@ body {
   width: 88px;
   border-radius: 50%;
   margin-bottom: 24px;
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.btn {
+  align-items: stretch;
+  background-color: hsl(0, 0%, 20%);
+  border: none;
+  border-radius: 8px;
+  color: hsl(0, 0%, 100%);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.5;
+  padding: 12px;
+}
+
+.btn:hover {
+  background-color: hsl(75, 94%, 57%);
+  cursor: pointer;
+  color: hsl(0, 0%, 8%);
+}
+
+/* MEDIA QUERY FOR MOBILE */
+@media (max-width: 600px) {
+  #container {
+    min-width: 327px;
+    padding: 24px;
+  }
 }
